@@ -1,0 +1,362 @@
+:root {
+    --primary: #ff1a1a;
+    --text: #222;
+    --border: #a8a8a8;
+    --background: #e9e9e9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: #fff;
+    font-size: 11px;
+}
+
+.page {
+    width: 100%;
+    max-width: 580px;
+    min-height: 780px;
+    margin: 0 auto;
+    padding: 8px 10px 15px;
+    background: var(--background);
+    border-left: 1px solid #c7c7c7;
+    border-right: 1px solid #c7c7c7;
+}
+
+.required-note {
+    font-size: 9px;
+    margin-bottom: 8px;
+}
+
+.required-note span,
+h2 span {
+    color: red;
+}
+
+.monthly-fields {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.steps {
+    display: flex;
+    gap: 20px;
+    font-size: 10px;
+    margin-bottom: 7px;
+}
+
+.steps strong {
+    font-weight: 700;
+}
+
+
+.comments-label {
+    text-align: right;
+    padding-right: 5px;
+}
+
+.comments-label label {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.comment-note {
+    display: block;
+    margin-top: 2px;
+    font-size: 8px;
+    line-height: 9px;
+}
+
+
+form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+h2 {
+    margin: 8px 0 3px;
+    font-size: 15px;
+    line-height: 1.1;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    align-items: center;
+    min-height: 20px;
+    margin: 0;
+}
+
+.form-row > label:first-child {
+    display: block;
+    margin: 0;
+    padding-right: 5px;
+    text-align: right;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.form-row > label:first-child span {
+    color: red;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+textarea,
+select {
+    display: block;
+    width: 100%;
+    height: 20px;
+    padding: 1px 4px;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 1px;
+    transition: border-color .2s, box-shadow .2s, background .2s;
+}
+
+select {
+    padding: 0 2px;
+}
+
+textarea {
+    height: 55px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    background: #fff;
+    border-color: #777;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .25);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+    margin: 0 3px 0 0;
+    padding: 0;
+    vertical-align: middle;
+    accent-color: #2877b8;
+    cursor: pointer;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3px 8px;
+}
+
+.options label,
+.contact-section label,
+.newsletter label,
+.check-list label,
+.volunteer label {
+    display: inline-block;
+    margin: 0;
+    font-size: 10px;
+    font-weight: 400;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.vertical-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.radio-row,
+.checkbox-row {
+    min-height: 20px;
+}
+
+.helper {
+    margin: -1px 0 2px 160px;
+    font-size: 9px;
+    line-height: 10px;
+}
+
+.small-input {
+    width: 105px !important;
+}
+
+.tiny-input {
+    width: 45px !important;
+    margin-left: 4px;
+}
+
+.inline-text {
+    margin-left: 4px;
+    font-size: 10px;
+}
+
+.instruction {
+    margin: 0 0 2px;
+    font-size: 9px;
+}
+
+.check-list {
+    margin-left: 160px;
+    margin-top: 3px;
+}
+
+.check-list label {
+    display: block;
+    line-height: 16px;
+}
+
+.comments-row {
+    margin-top: 3px;
+    align-items: start;
+}
+
+.comments-row > label:first-child {
+    padding-top: 2px;
+}
+
+
+.comments-row textarea {
+    height: 55px;
+}
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    margin-top: 5px;
+}
+
+.contact-title {
+    grid-row: span 4;
+    padding-right: 5px;
+    text-align: right;
+    font-weight: 700;
+    font-size: 10px;
+}
+
+.contact-section label {
+    display: block;
+    line-height: 15px;
+}
+
+.newsletter {
+    margin-top: 5px;
+    margin-left: 0;
+    color: #888;
+    font-size: 9px;
+    line-height: 15px;
+}
+
+.newsletter label {
+    display: block;
+    margin-left: 160px;
+    color: #222;
+}
+
+.volunteer {
+    margin-top: 3px;
+}
+
+.buttons {
+    margin-top: 5px;
+    padding-top: 4px;
+    border-top: 3px solid #fff;
+    text-align: center;
+}
+
+#greySupport {color:#888;}
+
+input[type="submit"],
+input[type="reset"] {
+    margin: 0 2px;
+    padding: 1px 10px;
+    height: 18px;
+    font-size: 10px;
+    font-weight: 400;
+    border: 1px solid #999;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: background .2s, transform .1s;
+}
+
+input[type="submit"] {
+    background: #efefef;
+    color: #222;
+}
+
+input[type="submit"]:hover {
+    background: #ddd;
+}
+
+input[type="reset"] {
+    background: #efefef;
+    color: #222;
+}
+
+input[type="reset"]:hover {
+    background: #ddd;
+}
+
+input[type="submit"]:active,
+input[type="reset"]:active {
+    transform: scale(.98);
+}
+
+.security {
+    margin-top: 10px;
+    font-size: 9px;
+}
+
+.footer-note {
+    margin: 7px 0 0;
+    font-size: 9px;
+}
+
+@media (max-width: 480px) {
+    .page {
+        padding: 8px;
+    }
+
+    .form-row {
+        grid-template-columns: 125px 1fr;
+    }
+
+    .helper,
+    .check-list {
+        margin-left: 125px;
+    }
+
+    .contact-section {
+        grid-template-columns: 125px 1fr;
+    }
+
+    .newsletter label {
+        margin-left: 125px;
+    }
+}
